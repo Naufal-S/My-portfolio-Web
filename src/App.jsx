@@ -1,4 +1,3 @@
-
 import './App.css'
 
 function App() {
@@ -29,7 +28,6 @@ function App() {
 
       {/* HERO SECTION */}
       <section className="hero-section" id="about">
-
         <div className="hero-content">
           <div className="availability">
             <span className="status-dot"></span>
@@ -71,7 +69,6 @@ function App() {
 
         {/* ECE PROCESSOR VISUAL */}
         <div className="hero-visual">
-
           <div className="visual-top-label">
             <span className="status-dot"></span>
             SYSTEM ARCHITECTURE
@@ -215,8 +212,7 @@ function App() {
         </div>
       </section>
 
-     
-      {/* Projects */}
+      {/* PROJECTS */}
       <section className="projects-section" id="projects">
         <div className="section-heading">
           <p className="eyebrow">BUILD · EXPERIMENT · INNOVATE</p>
@@ -252,30 +248,30 @@ function App() {
                 <span>Energy Harvesting</span>
                 <span>Electronics</span>
               </div>
-              
             </div>
+
             <details className="project-details">
-  <summary>View Project Details ↗</summary>
-  <div className="project-details-content">
-    <h4>Project Overview</h4>
-    <p>
-      This project explores converting mechanical pressure and
-      vibrations into electrical energy through the piezoelectric effect.
-    </p>
+              <summary>View Project Details ↗</summary>
+              <div className="project-details-content">
+                <h4>Project Overview</h4>
+                <p>
+                  This project explores converting mechanical pressure and
+                  vibrations into electrical energy through the piezoelectric effect.
+                </p>
 
-    <h4>Engineering Concepts</h4>
-    <ul>
-      <li>Piezoelectric effect</li>
-      <li>Energy harvesting</li>
-      <li>Electrical signal measurement</li>
-      <li>Power conditioning concepts</li>
-    </ul>
+                <h4>Engineering Concepts</h4>
+                <ul>
+                  <li>Piezoelectric effect</li>
+                  <li>Energy harvesting</li>
+                  <li>Electrical signal measurement</li>
+                  <li>Power conditioning concepts</li>
+                </ul>
 
-    <p className="detail-note">
-      Prototype photographs and technical documentation will be added.
-    </p>
-  </div>
-</details>
+                <p className="detail-note">
+                  Prototype photographs and technical documentation will be added.
+                </p>
+              </div>
+            </details>
           </article>
 
           {/* Project 2 */}
@@ -307,35 +303,35 @@ function App() {
                 Research paper related to this project.
               </p>
             </div>
+
             <details className="project-details">
-  <summary>View Project Details ↗</summary>
-  <div className="project-details-content">
-    <h4>Project Overview</h4>
-    <p>
-      A robotics project focused on a robot designed for soccer-based
-      challenges, exploring movement and control.
-    </p>
+              <summary>View Project Details ↗</summary>
+              <div className="project-details-content">
+                <h4>Project Overview</h4>
+                <p>
+                  A robotics project focused on a robot designed for soccer-based
+                  challenges, exploring movement and control.
+                </p>
 
-    <h4>Engineering Concepts</h4>
-    <ul>
-      <li>Robot movement and control</li>
-      <li>Motor control</li>
-      <li>Embedded systems</li>
-      <li>Robotics integration</li>
-    </ul>
+                <h4>Engineering Concepts</h4>
+                <ul>
+                  <li>Robot movement and control</li>
+                  <li>Motor control</li>
+                  <li>Embedded systems</li>
+                  <li>Robotics integration</li>
+                </ul>
 
-    <h4>Research Work</h4>
-    <p>
-      A research paper related to this project is part of my
-      academic research work.
-    </p>
+                <h4>Research Work</h4>
+                <p>
+                  A research paper related to this project is part of my
+                  academic research work.
+                </p>
 
-    <p className="detail-note">
-      Research paper PDF and project photographs can be added here.
-    </p>
-  </div>
-</details>
-
+                <p className="detail-note">
+                  Research paper PDF and project photographs can be added here.
+                </p>
+              </div>
+            </details>
           </article>
 
           {/* Project 3 */}
@@ -375,38 +371,39 @@ function App() {
           </article>
 
         </div>
+
         <details className="project-details">
-  <summary>View Project Details ↗</summary>
-  <div className="project-details-content">
-    <h4>Project Overview</h4>
-    <p>
-      IVIGILENCE is a NAIN 2.0 project combining an IoT-based
-      intravenous drip monitoring system with a voice-controlled
-      wheelchair-cum-stretcher.
-    </p>
+          <summary>View Project Details ↗</summary>
+          <div className="project-details-content">
+            <h4>Project Overview</h4>
+            <p>
+              IVIGILENCE is a NAIN 2.0 project combining an IoT-based
+              intravenous drip monitoring system with a voice-controlled
+              wheelchair-cum-stretcher.
+            </p>
 
-    <h4>Project Components</h4>
-    <ul>
-      <li>Intravenous drip monitoring</li>
-      <li>IoT-based monitoring system</li>
-      <li>Voice-controlled mobility assistance</li>
-      <li>Wheelchair-cum-stretcher integration</li>
-    </ul>
+            <h4>Project Components</h4>
+            <ul>
+              <li>Intravenous drip monitoring</li>
+              <li>IoT-based monitoring system</li>
+              <li>Voice-controlled mobility assistance</li>
+              <li>Wheelchair-cum-stretcher integration</li>
+            </ul>
 
-    <h4>Development</h4>
-    <p>
-      Currently under development as part of NAIN 2.0.
-    </p>
+            <h4>Development</h4>
+            <p>
+              Currently under development as part of NAIN 2.0.
+            </p>
 
-    <p className="detail-note">
-      Hardware architecture, circuit diagrams, prototype
-      photographs and test results will be added as development progresses.
-    </p>
-  </div>
-</details>
+            <p className="detail-note">
+              Hardware architecture, circuit diagrams, prototype
+              photographs and test results will be added as development progresses.
+            </p>
+          </div>
+        </details>
       </section>
 
-      {/* Research and Conferences */}
+      {/* RESEARCH AND CONFERENCES */}
       <section className="research-section" id="research">
         <div className="section-heading">
           <p className="eyebrow">BEYOND THE CLASSROOM</p>
@@ -444,7 +441,6 @@ function App() {
         </div>
       </section>
 
-
       {/* LEARNING JOURNEY */}
       <section className="journey-section" id="journey">
         <div className="section-heading">
@@ -469,36 +465,36 @@ function App() {
         </div>
       </section>
 
-     
-      {/* Contact */}
+      {/* CONTACT SECTION */}
       <footer className="contact-section" id="contact">
         <div className="contact-content">
-          <p className="eyebrow">HAVE AN IDEA OR OPPORTUNITY?</p>
+
+          <p className="eyebrow">CONTACT</p>
 
           <h2>
-            Let's build something
-            <span className="accent"> meaningful.</span>
+            Get in <span className="accent">Touch.</span>
           </h2>
 
           <p className="contact-description">
-            Get in Touch
-
-Feel free to connect with me.
+            Feel free to connect with me.
           </p>
 
           <div className="contact-links">
+
+            {/* EMAIL */}
             <a
               href="mailto:naufal.s017@gmail.com"
               className="contact-card"
             >
               <span className="contact-icon">✉</span>
               <span>
-                <small>EMAIL ME</small>
+                <small>EMAIL</small>
                 <strong>naufal.s017@gmail.com</strong>
               </span>
               <span className="contact-arrow">↗</span>
             </a>
 
+            {/* GITHUB */}
             <a
               href="https://github.com/Naufal-S"
               target="_blank"
@@ -507,12 +503,13 @@ Feel free to connect with me.
             >
               <span className="contact-icon">⌘</span>
               <span>
-                <small>EXPLORE MY CODE</small>
+                <small>GITHUB</small>
                 <strong>GitHub</strong>
               </span>
               <span className="contact-arrow">↗</span>
             </a>
 
+            {/* LINKEDIN */}
             <a
               href="https://www.linkedin.com/in/naufal-s017"
               target="_blank"
@@ -521,11 +518,12 @@ Feel free to connect with me.
             >
               <span className="contact-icon">in</span>
               <span>
-                <small>CONNECT PROFESSIONALLY</small>
+                <small>LINKEDIN</small>
                 <strong>LinkedIn</strong>
               </span>
               <span className="contact-arrow">↗</span>
             </a>
+
           </div>
         </div>
 
