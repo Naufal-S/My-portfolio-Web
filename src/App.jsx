@@ -481,8 +481,9 @@ function App() {
           </h2>
 
           <p className="contact-description">
-            Open to engineering collaborations, research opportunities,
-            technical discussions and connecting with fellow innovators.
+            Get in Touch
+
+Feel free to connect with me.
           </p>
 
           <div className="contact-links">
