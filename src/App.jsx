@@ -1,15 +1,50 @@
+import { useEffect, useState } from 'react'
 import './App.css'
 
+import profile from './assets/profile.jpeg'
+import piezoPhoto from './assets/piezoelectric.jpeg'
+import roboPhoto from './assets/robo-soccer.jpeg'
+
 function App() {
+  const [showWelcome, setShowWelcome] = useState(true)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowWelcome(false)
+    }, 2800)
+
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
     <main>
+      {/* WELCOME SCREEN */}
+      {showWelcome && (
+        <div className="welcome-screen">
+          <div className="welcome-content">
+            <span className="welcome-line">WELCOME TO MY</span>
+            <h1>
+              ENGINEERING <span>UNIVERSE.</span>
+            </h1>
+            <p>NAUFAL.S — ECE ENGINEERING PORTFOLIO</p>
+            <div className="welcome-loader">
+              <span />
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* NAVIGATION */}
       <nav className="navbar">
         <a href="#" className="brand">
-          <span className="brand-symbol">
-            <span />
+          <img
+            src={profile}
+            alt="Naufal"
+            className="nav-profile"
+          />
+          <span>
+            NAUFAL.S<span className="accent">.</span>
           </span>
-          <span>NAUFAL.S<span className="accent"></span></span>
         </a>
 
         <div className="nav-links">
@@ -67,14 +102,13 @@ function App() {
           </div>
         </div>
 
-        {/* ECE PROCESSOR VISUAL */}
+        {/* ECE PROCESSOR VISUAL — PRESERVED */}
         <div className="hero-visual">
           <div className="visual-top-label">
             <span className="status-dot"></span>
             SYSTEM ARCHITECTURE
           </div>
 
-          {/* Circuit connection lines */}
           <svg
             className="circuit-lines"
             viewBox="0 0 600 600"
@@ -99,12 +133,10 @@ function App() {
             </g>
           </svg>
 
-          {/* Orbit rings */}
           <div className="orbit orbit-one"></div>
           <div className="orbit orbit-two"></div>
           <div className="orbit orbit-three"></div>
 
-          {/* Central processor */}
           <div className="processor">
             <div className="processor-pins"></div>
 
@@ -115,7 +147,6 @@ function App() {
             </div>
           </div>
 
-          {/* Floating domain labels */}
           <div className="orbit-label label-one">
             <span className="label-icon">▦</span>
             <span>VLSI DESIGN</span>
@@ -136,7 +167,6 @@ function App() {
             <span>AI HARDWARE</span>
           </div>
 
-          {/* Signal waveform */}
           <div className="signal-panel">
             <span>LIVE SIGNAL</span>
             <svg viewBox="0 0 180 45" aria-hidden="true">
@@ -224,7 +254,6 @@ function App() {
         </div>
 
         <div className="project-grid">
-
           {/* Project 1 */}
           <article className="project-card">
             <div className="project-top">
@@ -233,7 +262,10 @@ function App() {
             </div>
 
             <div className="project-visual energy-visual">
-              <span>⚡</span>
+              <img
+                src={piezoPhoto}
+                alt="Piezoelectric power generation project"
+              />
             </div>
 
             <div className="project-info">
@@ -282,7 +314,10 @@ function App() {
             </div>
 
             <div className="project-visual robo-visual">
-              <span>⚽</span>
+              <img
+                src={roboPhoto}
+                alt="Robo Soccer project"
+              />
             </div>
 
             <div className="project-info">
@@ -369,7 +404,6 @@ function App() {
               </div>
             </div>
           </article>
-
         </div>
 
         <details className="project-details">
@@ -403,43 +437,75 @@ function App() {
         </details>
       </section>
 
-      {/* RESEARCH AND CONFERENCES */}
-      <section className="research-section" id="research">
-        <div className="section-heading">
-          <p className="eyebrow">BEYOND THE CLASSROOM</p>
-          <h2>Research & <span className="accent">Conferences</span></h2>
-          <p className="section-description">
-            Exploring research, sharing technical work and
-            participating in academic conferences.
-          </p>
-        </div>
+      
+{/* RESEARCH AND CONFERENCES */}
+<section className="research-section" id="research">
+  <div className="section-heading">
+    <p className="eyebrow">BEYOND THE CLASSROOM</p>
+    <h2>Research & <span className="accent">Conferences</span></h2>
+    <p className="section-description">
+      Exploring research, sharing technical work and
+      participating in academic conferences.
+    </p>
+  </div>
 
-        <div className="research-grid">
-          <article className="research-card">
-            <span className="research-icon">01</span>
-            <p className="eyebrow">RESEARCH WORK</p>
-            <h3>Robo Soccer Research Paper</h3>
-            <p>
-              Research paper based on the Robo Soccer project,
-              documenting the technical work and project concepts.
-            </p>
-            <span className="research-label">Research Paper</span>
-          </article>
+  <div className="research-grid">
+    <article className="research-card">
+      <span className="research-icon">01</span>
+      <p className="eyebrow">RESEARCH WORK</p>
+      <h3>Robo Soccer Research Paper</h3>
+      <p>
+        Research paper based on the Robo Soccer project,
+        documenting the technical work and project concepts.
+      </p>
+      <span className="research-label">Research Paper</span>
 
-          <article className="research-card">
-            <span className="research-icon">02</span>
-            <p className="eyebrow">ACADEMIC PARTICIPATION</p>
-            <h3>International Conference</h3>
-            <p>
-              Attended an International Conference held at
-              K.R. Pet Engineering College.
-            </p>
-            <span className="research-label">
-              Conference Participation
-            </span>
-          </article>
-        </div>
-      </section>
+      <div className="research-actions">
+        <a
+          href={`${import.meta.env.BASE_URL}papers/research-paper.pdf`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="research-btn"
+        >
+          View Research Paper ↗
+        </a>
+
+        <a
+          href={`${import.meta.env.BASE_URL}papers/research-paper.pdf`}
+          download
+          className="research-btn"
+        >
+          Download PDF ↓
+        </a>
+      </div>
+    </article>
+
+    
+<article className="research-card">
+  <span className="research-icon">02</span>
+  <p className="eyebrow">ACADEMIC PARTICIPATION</p>
+
+  <div className="conference-photo">
+    <img
+      src={`${import.meta.env.BASE_URL}images/conference.jpeg`}
+      alt="International Conference at K.R. Pete Krishna Government Engineering College"
+    />
+  </div>
+
+  <h3>International Conference</h3>
+  <p>
+    Attended an International Conference held at
+    K.R. Pete Krishna Government Engineering College.
+  </p>
+
+  <span className="research-label">
+    Conference Participation
+  </span>
+</article>
+
+  </div>
+</section>
+
 
       {/* LEARNING JOURNEY */}
       <section className="journey-section" id="journey">
@@ -468,7 +534,6 @@ function App() {
       {/* CONTACT SECTION */}
       <footer className="contact-section" id="contact">
         <div className="contact-content">
-
           <p className="eyebrow">CONTACT</p>
 
           <h2>
@@ -480,8 +545,6 @@ function App() {
           </p>
 
           <div className="contact-links">
-
-            {/* EMAIL */}
             <a
               href="mailto:naufal.s017@gmail.com"
               className="contact-card"
@@ -494,7 +557,6 @@ function App() {
               <span className="contact-arrow">↗</span>
             </a>
 
-            {/* GITHUB */}
             <a
               href="https://github.com/Naufal-S"
               target="_blank"
@@ -509,7 +571,6 @@ function App() {
               <span className="contact-arrow">↗</span>
             </a>
 
-            {/* LINKEDIN */}
             <a
               href="https://www.linkedin.com/in/naufal-s017"
               target="_blank"
@@ -523,7 +584,6 @@ function App() {
               </span>
               <span className="contact-arrow">↗</span>
             </a>
-
           </div>
         </div>
 
@@ -533,7 +593,6 @@ function App() {
           <a href="#about">BACK TO TOP ↑</a>
         </div>
       </footer>
-
     </main>
   )
 }
